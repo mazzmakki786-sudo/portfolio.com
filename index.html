@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>MUAZ MAKI </title>
+    <meta name="description"
+        content="Muhammad Muaz Maki - Professional Web Developer based in Faisalabad, Pakistan. Crafting digital experiences for local businesses.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="dark" data-theme="dark">
+    <!-- Custom Cursor -->
+    <div id="cursor-dot"></div>
+    <div id="cursor-ring"></div>
+    <div id="cursor-label"></div>
+
+    <!-- Scroll Progress -->
+    <div id="scroll-progress"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-inner">
+            <a href="#" class="logo" id="nav-logo">Muaz.Dev</a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#projects">Work</a>
+                <a href="#services">Services</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <button id="theme-toggle" aria-label="Toggle Theme">
+                    <svg class="sun-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="bg-visual-tr"></div>
+    <div class="bg-visual-bl"></div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="#about">About</a>
+        <a href="#projects">Work</a>
+        <a href="#services">Services</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+    </div>
+    <div class="mobile-menu-overlay" id="menu-overlay"></div>
+
+    <!-- Main Content -->
+    <main id="app">
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <canvas id="starfield"></canvas>
+            <div class="hero-inner">
+                <div class="hero-tag-container">
+                    <span class="hero-tag" id="rotating-tag">Available for Work</span>
+                </div>
+                <h2 class="hero-name">
+                    <span class="hero-name-line1" id="name-line1">MUHAMMAD</span>
+                    <span class="hero-name-line2" id="name-line2">MUAZ MAKI</span>
+                </h2>
+                <div class="hero-typed-container">
+                    <span class="hero-typed" id="typed-text"></span>
+                    <span class="typed-cursor">|</span>
+                </div>
+                <div class="hero-btns" id="hero-btns">
+                    <!-- Dynamic Buttons -->
+                </div>
+            </div>
+            <div class="scroll-hint">
+                <div class="scroll-line"></div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section reveal">
+            <div class="container container-about">
+                <div class="about-image">
+                    <div class="photo-frame" id="photo-frame">
+                        <div class="corner tl"></div>
+                        <div class="corner tr"></div>
+                        <div class="corner bl"></div>
+                        <div class="corner br"></div>
+                        <div class="img-placeholder">PHOTO</div>
+                    </div>
+                    <div class="location-tag">
+                        <span class="icon">📍</span> <span id="location-text">Faisalabad, Pakistan</span>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <h2 class="section-title" id="about-title">Crafting Digital Experiences</h2>
+                    <div class="bio-container">
+                        <p class="bio-text" id="bio-rotator"></p>
+                    </div>
+                    <div class="stats-table" id="stats-grid">
+                        <!-- Dynamic Stats -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section bg2 reveal">
+            <div class="container">
+                <h2 class="section-title">Skills & Expertise</h2>
+                <div class="skills-grid" id="skills-grid">
+                    <!-- Dynamic Skills -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section reveal">
+            <div class="container overflow-hidden">
+                <center>
+                    <h2 class="section-title">Featured Work</h2>
+                </center>
+                <div class="project-slider-wrapper">
+                    <div class="projects-grid" id="projects-grid">
+                        <!-- Dynamic Projects -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="section bg2 reveal">
+            <div class="container overflow-hidden">
+                <center>
+                    <h2 class="section-title">Services</h2>
+                </center>
+                <div class="service-slider-wrapper">
+                    <div class="services-grid" id="services-grid">
+                        <!-- Dynamic Services -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="section bg2 reveal">
+            <div class="container Pricing-Container">
+                <h2 class="section-title text-center">Pricing Plans</h2>
+                <div class="pricing-toggle-nav" id="pricing-nav">
+                    <button class="toggle-btn active" data-type="onetime">One-Time Payment</button>
+                    <button class="toggle-btn" data-type="monthly">Monthly Installments</button>
+                    <div class="toggle-glider"></div>
+                </div>
+                <div class="pricing-grid" id="pricing-grid">
+                    <!-- Dynamic Pricing -->
+                </div>
+                <div class="payment-methods">
+                    <p class="method-title">Accepted Methods:</p>
+                    <div class="method-icons">
+                        <div class="method-item">
+                            <svg class="pt-svg" viewBox="0 0 100 40" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="100" height="40" rx="8" fill="#e51c24" />
+                                <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" fill="#fff"
+                                    font-family="Arial" font-weight="bold" font-size="14">JazzCash</text>
+                            </svg>
+                            <span>JazzCash</span>
+                        </div>
+                        <div class="method-item">
+                            <svg class="pt-svg" viewBox="0 0 100 40" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="100" height="40" rx="8" fill="#1b7340" />
+                                <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" fill="#fff"
+                                    font-family="Arial" font-weight="bold" font-size="14">easyPaisa</text>
+                            </svg>
+                            <span>EasyPaisa</span>
+                        </div>
+                        <div class="method-item">
+                            <span class="icon">🏦</span>
+                            <span>Bank Transfer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section id="testimonials" class="section reveal">
+            <div class="container">
+                <h2 class="section-title text-center">What Clients Say</h2>
+                <div class="testimonials-grid" id="testimonials-grid">
+                    <!-- Dynamic Testimonials -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section reveal">
+            <div class="container container-contact">
+                <div class="contact-info">
+                    <h2 class="section-title" id="contact-title">Let's Build Something Great</h2>
+                    <p class="contact-desc" id="contact-desc"></p>
+                    <div class="contact-links">
+                        <a href="mailto:mazzmakki786@gmail.com" class="c-link"><span id="contact-email"></span></a>
+                        <a href="tel:+923146325823" class="c-link"><span id="contact-phone"></span></a>
+                    </div>
+                </div>
+                <div class="contact-form-wrap">
+                    <form id="contact-form" action="https://formspree.io/f/mazzmakki786@gmail.com" method="POST">
+                        <div class="form-group">
+                            <input type="text" id="form-name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="form-whatsapp" name="whatsapp" placeholder="WhatsApp / Phone"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <select id="form-service" name="service" required>
+                                <option value="" disabled selected>Service Needed</option>
+                                <!-- Dynamic Options -->
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="form-message" name="message" placeholder="Your Message" rows="4"
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn-p" id="form-submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container footer-inner">
+                <div class="footer-left">
+                    <span id="footer-logo">Muaz .Dev</span>
+                </div>
+                <div class="footer-center">
+                    &copy; 2026 <span id="footer-year-name">Muaz Maki</span>. All rights reserved.
+                </div>
+                <div class="footer-right">
+                    <span id="footer-owner">MUAZ MAKI</span>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/923146325823" class="wa-float" id="wa-float" target="_blank" aria-label="WhatsApp">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="30"
+            height="30">
+    </a>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
